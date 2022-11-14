@@ -39,7 +39,7 @@ public class WeatherForecastTest {
 	}
 
 	// Prueba de tiempo óptimo
-	@Test(timeout = 100)
+	@Test(timeout = 3000)
 	public void testWeatherForecastOptimo() throws IOException {
 		String forecast = WeatherForecast.getCityWeather("Madrid", new Date());
 		assertNotNull("Predicción no obtenida", forecast);

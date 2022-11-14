@@ -32,10 +32,13 @@ public enum ForecastEnum {
     THUNDERSTORM_WITH_SLIGHT_HAIL(96, "Thunderstorm with slight hail"),
     THUNDERSTORM_WITH_HEAVY_HAIL(99, "Thunderstorm with heavy hail");
 
+	// El código de la predicción
     private final int code;
 
+    // La descripción de la predicción
     private final String description;
 
+    // Se crea un HashMap para emparejar las predicciones con sus códigos
     private static final HashMap<Integer, ForecastEnum> lookup;
 
     static {
@@ -45,15 +48,18 @@ public enum ForecastEnum {
         }
     }
 
+    // Constructor
     ForecastEnum(int code, String description) {
         this.code = code;
         this.description = description;
     }
 
+    // Método para obtener la predicción con el código
     public static ForecastEnum getEnumByCode(int code) {
         return lookup.get(code);
     }
-
+    
+    // Método para obtener la descripción
     public String getDescription() {
         return description;
     }
